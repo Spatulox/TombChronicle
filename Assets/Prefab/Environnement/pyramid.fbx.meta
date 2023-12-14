@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 546e3c4cd995ef549abde3a2fc53672c
+guid: 633d0f0713370424394f5b471e5b8507
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: bricks_0007_color_2k
-    second: {fileID: 2800000, guid: 3e34f1435341aaa43a144b4d6a0b04b4, type: 3}
+    second: {fileID: 2800000, guid: cc1cdb42b32e267418820934bd28f739, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
