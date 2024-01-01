@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RotatePrefab : MonoBehaviour
@@ -10,10 +8,15 @@ public class RotatePrefab : MonoBehaviour
 
 	public float degreeToRotate;
 	
+	public float timeToRotate;
+	
+	private float _time;
+	private Quaternion _targetRotation;
+	
 	// Start is called before the first frame update
     void Start()
     {
-        
+	    
     }
 
     // Update is called once per frame
@@ -21,15 +24,26 @@ public class RotatePrefab : MonoBehaviour
     {
 	    if (axeToRotate == "x")
 	    {
-		    prefab.transform.Rotate(new Vector3(degreeToRotate,0,0), Space.Self);    
+		    _targetRotation = Quaternion.Euler(degreeToRotate, 0, 0);
+		    //prefab.transform.Rotate(new Vector3(degreeToRotate,0,0), Space.Self);    
 	    }
 	    else if (axeToRotate == "y")
 	    {
-		    prefab.transform.Rotate(new Vector3(0,degreeToRotate,0), Space.Self);
+		    _targetRotation = Quaternion.Euler(0, degreeToRotate, 0);
+		    //prefab.transform.Rotate(new Vector3(0,degreeToRotate,0), Space.Self);
 	    }
 	    else if (axeToRotate == "z")
 	    {
-		    prefab.transform.Rotate(new Vector3(0,0,degreeToRotate), Space.Self);
+		    _targetRotation = Quaternion.Euler(0, 0, degreeToRotate);
+		    //prefab.transform.Rotate(new Vector3(0,0,degreeToRotate), Space.Self);
+	    }
+	    
+	    
+	    _time += Time.deltaTime;
+	    if (_time < timeToRotate)
+	    {
+		    float t = _time / timeToRotate;
+		    transform.rotation = Quaternion.Slerp(transform.rotation, _targetRotation, t);
 	    }
 
     }
