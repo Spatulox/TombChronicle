@@ -3,7 +3,7 @@ using UnityEngine;
 public class ActiveOnTriggered : MonoBehaviour
 {
     public GameObject objectToActivate;
-    public int desactivateObject = 0;
+    //public int desactivateObject = 0;
     public string tagWichTrigger = "Player";
     public string tagThingToActivate = "VDoors";
 
@@ -28,6 +28,7 @@ public class ActiveOnTriggered : MonoBehaviour
         }
     }
     
+    /*
     private void OnTriggerExit(Collider other)
     {
         //If the tagWichTrigger trigger the collider
@@ -45,7 +46,8 @@ public class ActiveOnTriggered : MonoBehaviour
         }
         else
         {
-            Debug.Log("Wrong Tag to activate the thing, GameObject tag :"+other.gameObject.tag+", Tag wich trigerred : "+tagWichTrigger);
+            Debug.Log("Wrong Tag to activate the thing, GameObject tag :"+other.gameObject.tag+", Tag wich trigerred : "+tagWichTrigger+" or the object is desactivate the return to the ground");
         }
     }
+    */
 }
