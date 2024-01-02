@@ -15,7 +15,7 @@ public class ActiveOnTriggered : MonoBehaviour
             // If thing to activate is a door
             if (tagThingToActivate == "Doors")
             {
-                objectToActivate.GetComponent<OpenDoors>().UpperHeight();   
+                objectToActivate.GetComponent<OpenVerticalDoors>().UpperHeight();   
             }
         }
         else
@@ -32,7 +32,7 @@ public class ActiveOnTriggered : MonoBehaviour
             // If thing to activate is a door
             if (tagThingToActivate == "Doors")
             {
-                objectToActivate.GetComponent<OpenDoors>().LowerHeight();
+                objectToActivate.GetComponent<OpenVerticalDoors>().LowerHeight();
             }
         }
         else

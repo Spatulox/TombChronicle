@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class OpenDoors : MonoBehaviour
+public class OpenVerticalDoors : MonoBehaviour
 {
     
     public float timeToTRavel = 0.5f;
