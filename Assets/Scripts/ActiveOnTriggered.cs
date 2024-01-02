@@ -5,7 +5,7 @@ public class ActiveOnTriggered : MonoBehaviour
     public GameObject objectToActivate;
     public int desactivateObject = 0;
     public string tagWichTrigger = "Player";
-    public string tagThingToActivate = "Doors";
+    public string tagThingToActivate = "VDoors";
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,9 +13,13 @@ public class ActiveOnTriggered : MonoBehaviour
         if (other.gameObject.CompareTag(tagWichTrigger))
         {
             // If thing to activate is a door
-            if (tagThingToActivate == "Doors")
+            if (tagThingToActivate == "VDoors")
             {
                 objectToActivate.GetComponent<OpenVerticalDoors>().UpperHeight();   
+            }
+            if (tagThingToActivate == "LDoors")
+            {
+                objectToActivate.GetComponent<OpenLateralDoors>().OpenDoors();   
             }
         }
         else
@@ -30,9 +34,13 @@ public class ActiveOnTriggered : MonoBehaviour
         if (other.gameObject.CompareTag(tagWichTrigger) && desactivateObject != 0)
         {
             // If thing to activate is a door
-            if (tagThingToActivate == "Doors")
+            if (tagThingToActivate == "VDoors")
             {
                 objectToActivate.GetComponent<OpenVerticalDoors>().LowerHeight();
+            }
+            if (tagThingToActivate == "LDoors")
+            {
+                objectToActivate.GetComponent<OpenLateralDoors>().CloseDoors();
             }
         }
         else
