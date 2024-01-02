@@ -6,6 +6,7 @@ public class OpenLateralDoors : MonoBehaviour
 {
     public float timeToTRavel = 0.5f;
     public int secondBeforeClose = 10;
+    public int automaticClose = 1;
     
     private float _rWidth;
     private float _lWidth;
@@ -27,24 +28,35 @@ public class OpenLateralDoors : MonoBehaviour
         rightPart = transform.Find("rightPart").gameObject;
         leftPart = transform.Find("leftPart").gameObject;
         
+        /*
+        _rWidth = 12.19082f;
+        _lWidth = 12.12706f;
+        */
         
-        _rWidth = rightPart.GetComponent<Renderer>().bounds.size.x;
-        _lWidth = leftPart.GetComponent<Renderer>().bounds.size.x;
+        // Get local z size
+        Vector3 localSize = rightPart.GetComponent<BoxCollider>().size;
+        _rWidth = localSize.z * transform.lossyScale.z;
         
-        _initialRightPos = rightPart.transform.position;
-        _initialLeftPos = leftPart.transform.position;
+        localSize = leftPart.GetComponent<BoxCollider>().size;
+        _lWidth = localSize.z * transform.lossyScale.z;
+
+        // Fait des trucs
+        _initialRightPos = rightPart.transform.localPosition;
+        _initialLeftPos = leftPart.transform.localPosition;
         
         _currPosRightPart = _initialRightPos;
         _currPosLeftPart = _initialLeftPos;
+
+        // Calculer les positions finales en utilisant les coordonnées locales par rapport au parent
+        _finalRightPos = new Vector3(rightPart.transform.localPosition.x, rightPart.transform.localPosition.y, _rWidth*0.65f);
+        _finalLeftPos = new Vector3(leftPart.transform.localPosition.x, leftPart.transform.localPosition.y, -_lWidth*0.65f);
         
-        _finalRightPos = _initialRightPos + Vector3.left * _rWidth;
-        _finalLeftPos = _initialLeftPos + Vector3.right * _lWidth;
     }
 
     private void FixedUpdate()
     {
-        rightPart.transform.position = _currPosRightPart;
-        leftPart.transform.position = _currPosLeftPart;
+        rightPart.transform.localPosition = _currPosRightPart;
+        leftPart.transform.localPosition = _currPosLeftPart;
     }
     
     
@@ -70,7 +82,7 @@ public class OpenLateralDoors : MonoBehaviour
     
     IEnumerator OpenObject()
     {
-        if (Vector3.Distance(rightPart.transform.position, _finalRightPos) < 0.1f || Vector3.Distance(leftPart.transform.position, _finalLeftPos) < 0.1f)
+        if (Vector3.Distance(rightPart.transform.localPosition, _finalRightPos) < 0.1f || Vector3.Distance(leftPart.transform.localPosition, _finalLeftPos) < 0.1f)
         {
             _isOpening = false;
             yield break;
@@ -79,25 +91,31 @@ public class OpenLateralDoors : MonoBehaviour
 
         while (time < timeToTRavel)
         {
-            rightPart.transform.position = Vector3.Lerp(_initialRightPos, _finalRightPos, time / timeToTRavel);
-            leftPart.transform.position = Vector3.Lerp(_initialLeftPos, _finalLeftPos, time / timeToTRavel);
+            rightPart.transform.localPosition  = Vector3.Lerp(_initialRightPos, _finalRightPos, time / timeToTRavel);
+            leftPart.transform.localPosition  = Vector3.Lerp(_initialLeftPos, _finalLeftPos, time / timeToTRavel);
             time += Time.deltaTime;
             yield return null;
         }
 
-        rightPart.transform.position = _finalRightPos;
-        leftPart.transform.position = _finalLeftPos;
-        _currPosRightPart = rightPart.transform.position;
-        _currPosLeftPart = leftPart.transform.position;
-        
+        rightPart.transform.localPosition = _finalRightPos;
+        leftPart.transform.localPosition = _finalLeftPos;
+        _currPosRightPart = rightPart.transform.localPosition;
+        _currPosLeftPart = leftPart.transform.localPosition;
+
         _isOpening = false;
+        
+        if (automaticClose == 1)
+        {
+            yield return StartCoroutine(StopFor());
+            CloseDoors();
+        }
     }
     
     
     IEnumerator CloseObject()
     {
         
-        if (Vector3.Distance(rightPart.transform.position, _initialRightPos) < 0.1f || Vector3.Distance(leftPart.transform.position, _initialLeftPos) < 0.1f)
+        if (Vector3.Distance(rightPart.transform.localPosition, _initialRightPos) < 0.1f || Vector3.Distance(leftPart.transform.localPosition, _initialLeftPos) < 0.1f)
         {
             _isClosing = false;
             yield break;
@@ -107,22 +125,28 @@ public class OpenLateralDoors : MonoBehaviour
         
         while (time < timeToTRavel)
         {
-            rightPart.transform.position = Vector3.Lerp(_finalRightPos, _initialRightPos, time / timeToTRavel);
-            leftPart.transform.position = Vector3.Lerp(_finalLeftPos, _initialLeftPos, time / timeToTRavel);
+            rightPart.transform.localPosition  = Vector3.Lerp(_finalRightPos, _initialRightPos, time / timeToTRavel);
+            leftPart.transform.localPosition  = Vector3.Lerp(_finalLeftPos, _initialLeftPos, time / timeToTRavel);
             time += Time.deltaTime;
             yield return null;
         }
 
         
-        rightPart.transform.position = _initialRightPos;
-        leftPart.transform.position = _initialLeftPos;
-        _currPosRightPart = rightPart.transform.position;
-        _currPosLeftPart = leftPart.transform.position;
+        rightPart.transform.localPosition = _initialRightPos;
+        leftPart.transform.localPosition = _initialLeftPos;
+        _currPosRightPart = rightPart.transform.localPosition;
+        _currPosLeftPart = leftPart.transform.localPosition;
         _isClosing = false;
     }
     
     IEnumerator WaitAndDoSomething()
     {
+        yield return new WaitForSeconds(secondBeforeClose);
+    }
+    
+    IEnumerator StopFor()
+    {
+        
         yield return new WaitForSeconds(secondBeforeClose);
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class OpenVerticalDoors : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class OpenVerticalDoors : MonoBehaviour
     public float timeToTRavel = 0.5f;
     private float _height;
     public int secondBeforeClose = 10;
+    public int automaticClose = 1;
     private Vector3 _initialPos;
     private Vector3 _finalUpPos;
     private Vector3 _currPos;
@@ -16,15 +18,16 @@ public class OpenVerticalDoors : MonoBehaviour
     private bool _isLanding = false;
     void Start()
     {
-        _height = gameObject.GetComponent<Renderer>().bounds.size.y;
+        _height = gameObject.GetComponent<Collider>().bounds.size.y;
         this._initialPos = gameObject.transform.position;
         this._currPos = this._initialPos;
         this._finalUpPos = _initialPos + Vector3.up * _height;
+   
     }
 
     private void FixedUpdate()
     {
-        gameObject.transform.position = this._currPos;
+        //gameObject.transform.position = this._currPos;
     }
 
     public void UpperHeight()
@@ -33,6 +36,7 @@ public class OpenVerticalDoors : MonoBehaviour
         {
             _isTakingOff = true;
             StartCoroutine(TakeOffObject());
+            
         }
     }
     
@@ -64,9 +68,15 @@ public class OpenVerticalDoors : MonoBehaviour
         }
 
         gameObject.transform.position = this._finalUpPos;
-        this._currPos = gameObject.transform.position;
+        this._currPos = this._finalUpPos;
         
         _isTakingOff = false;
+
+        if (automaticClose == 1)
+        {
+            yield return StartCoroutine(StopFor());
+            LowerHeight();
+        }
     }
     
     
@@ -90,12 +100,17 @@ public class OpenVerticalDoors : MonoBehaviour
 
         
         gameObject.transform.position = this._initialPos;
-        this._currPos = gameObject.transform.position;
+        this._currPos = this._initialPos;
         _isLanding = false;
     }
     
     IEnumerator WaitAndDoSomething()
     {
+        yield return new WaitForSeconds(secondBeforeClose);
+    }
+    IEnumerator StopFor()
+    {
+        
         yield return new WaitForSeconds(secondBeforeClose);
     }
     
