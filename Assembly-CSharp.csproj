@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>9.0</LangVersion>
@@ -43,19 +43,19 @@
   <ItemGroup>
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.4f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
-    <Analyzer Include="C:\Marc\Perso\Logiciels\Unity\UnityEditor\2022.3.4f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
-    <Analyzer Include="C:\Marc\Perso\Logiciels\Unity\UnityEditor\2022.3.4f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\rotatePrefab.cs" />
+     <Compile Include="Assets\Scripts\ActiveOnTriggered.cs" />
+     <Compile Include="Assets\Scripts\OpenLateralDoors.cs" />
      <Compile Include="Assets\Scripts\loadSceneScript.cs" />
      <Compile Include="Assets\Scripts\SpanwnPoint.cs" />
+     <Compile Include="Assets\Scripts\OpenVerticalDoors.cs" />
      <Compile Include="Assets\Scripts\DamageArea.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\LifeSystem.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.settings-manager@2.0.1\package.json" />
-     <Folder Include="Assets\Materials\ressources" />
      <Folder Include="Assets\Materials\ressources" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33" />
@@ -66,13 +66,13 @@
      <Folder Include="Assets\Materials" />
      <None Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\package.json" />
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.24\Rider" />
-     <Folder Include="Assets\Materials" />
      <Folder Include="Assets\Prefab" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\package.json" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.9.1\Graphics" />
      <None Include="Library\PackageCache\com.unity.timeline@1.7.6\package.json" />
+     <Folder Include="Assets\Prefab\Environnement\Blender" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom" />
      <Folder Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <Folder Include="Library\PackageCache\com.unity.visualscripting@1.9.1" />
@@ -90,12 +90,13 @@
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\PackageConversionData.json" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\package.json" />
+     <Folder Include="Assets\Prefab\Decorations" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets\Materials\decor" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\ValidationExceptions.json" />
-     <Folder Include="Assets\Materials\decor" />
      <Folder Include="Assets\TextMesh Pro" />
      <Folder Include="Assets\Scenes" />
+     <Folder Include="Assets\Prefab\GroupPrefab" />
      <None Include="Library\PackageCache\com.unity.ide.rider@3.0.24\package.json" />
      <None Include="Library\PackageCache\com.unity.test-framework@1.1.33\package.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Scripts" />
@@ -105,6 +106,7 @@
      <Folder Include="Assets\Scripts" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Library\PackageCache\com.unity.visualscripting@1.9.1\ValidationExceptions.json" />
+     <Folder Include="Assets\Prefab\Autres" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <Folder Include="Library\PackageCache\com.unity.settings-manager@2.0.1" />
@@ -126,6 +128,8 @@
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6" />
      <Folder Include="Library\PackageCache\com.unity.ide.rider@3.0.24" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <Folder Include="Assets\Prefab\blenderTextures\Materials" />
+     <Folder Include="Assets\Prefab\Autres\Blender" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\ValidationConfig.json" />
      <Folder Include="Library\PackageCache\com.unity.ide.vscode@1.2.5" />
@@ -133,6 +137,7 @@
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_Properties.cginc" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF Internal Editor.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <Folder Include="Assets\Prefab\Decorations\Blender" />
      <Folder Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\Lib" />
      <None Include="Library\PackageCache\com.unity.ide.vscode@1.2.5\ValidationExceptions.json" />
      <None Include="Library\PackageCache\com.unity.visualscripting@1.9.1\ValidationConfig.json" />
@@ -148,8 +153,8 @@
      <Folder Include="Assets\TextMesh Pro\Documentation" />
      <Folder Include="Assets\Materials\ressources\bricks" />
      <Folder Include="Library\PackageCache\com.unity.testtools.codecoverage@1.2.4\lib" />
-     <Folder Include="Assets\Materials\ressources\bricks" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <Folder Include="Assets\Prefab\Environnement" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
      <Folder Include="Library\PackageCache\com.unity.settings-manager@2.0.1\Tests" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
