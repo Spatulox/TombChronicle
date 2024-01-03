@@ -45,7 +45,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             directionIntent += Vector3.right;
-            Debug.Log("marc");
         }
 
         var mouseXDelta = Input.GetAxis("Mouse X");
