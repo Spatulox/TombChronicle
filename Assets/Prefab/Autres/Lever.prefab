@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7520046738218902093}
+  - component: {fileID: 7784716628294925910}
   m_Layer: 0
   m_Name: Lever
   m_TagString: Untagged
@@ -23,7 +24,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4776930246217534083}
-  serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 30.187153, y: 0.505, z: 83.09964}
   m_LocalScale: {x: 1.6324091, y: 1.6324091, z: 1.6324091}
@@ -32,7 +32,29 @@ Transform:
   - {fileID: 6721803004982185649}
   - {fileID: 5210621075240531114}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &7784716628294925910
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4776930246217534083}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.31942326, y: 0.28661075, z: 1}
+  m_Center: {x: 0.0072634043, y: 0.15645579, z: -3.616367e-16}
 --- !u!1001 &5748107425678709569
 PrefabInstance:
   m_ObjectHideFlags: 0
