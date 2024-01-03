@@ -43,7 +43,7 @@ public class RotatePrefab : MonoBehaviour
 	    if (_time < timeToRotate)
 	    {
 		    float t = _time / timeToRotate;
-		    transform.rotation = Quaternion.Slerp(transform.rotation, _targetRotation, t);
+		    prefab.transform.rotation = Quaternion.Slerp(transform.rotation, _targetRotation, t);
 	    }
 
     }
