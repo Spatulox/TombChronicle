@@ -153,7 +153,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             // Trouver le GameObject nommé "Robot"
-            GameObject player = GameObject.Find("Playerv").gameObject;
+            GameObject player = GameObject.Find("Player").gameObject;
 
             // Vérifier si le GameObject "Robot" a été trouvé
             if (player != null)
