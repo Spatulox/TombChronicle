@@ -155,6 +155,7 @@ MonoBehaviour:
   prefab: {fileID: 609824494}
   axeToRotate: x
   degreeToRotate: 90
+  timeToRotate: 2
 --- !u!4 &299903176
 Transform:
   m_ObjectHideFlags: 0
