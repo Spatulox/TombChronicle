@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 8531969796012952371}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &52010411518164197
 Rigidbody:
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameScene: 
-  spawnpoitn: {x: 0, y: 0, z: 0}
+  playerRespawnPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &7126249894478385755
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 3943401639706092572}
   m_Layer: 0
   m_Name: FPS
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
