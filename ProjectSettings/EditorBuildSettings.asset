@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/levelSelection.unity
-    guid: 3ed0c6f87166fdf4099af187f3d85602
+    guid: a7041f94ea2df52498dab2fb56e88bc6
   - enabled: 1
     path: Assets/Scenes/level1.unity
     guid: 6974269b069d0f142bdaf877eef3821f
@@ -23,4 +23,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level4.unity
     guid: 737a73f46d5216a4e92f65bece4bfe5b
+  - enabled: 1
+    path: Assets/Scenes/youWonMenu.unity
+    guid: 14069c33be2f90047948af9c3bc95883
+  - enabled: 1
+    path: Assets/Scenes/youLostMenu.unity
+    guid: 58426c531feaf0a45a988713217b6bbc
+  - enabled: 1
+    path: Assets/Scenes/Prefab.unity
+    guid: 2a9666d489104274aaadaea77e02cdab
+  - enabled: 1
+    path: Assets/Scenes/groupPrefab.unity
+    guid: a5d9f5512fe4b5540aa4d72163e3cfd8
   m_configObjects: {}
