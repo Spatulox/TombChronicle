@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Doors
   - Robot
+  - DamageZone
   layers:
   - Default
   - TransparentFX
