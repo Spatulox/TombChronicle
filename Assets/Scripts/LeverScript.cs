@@ -14,20 +14,16 @@ public class LeverScript : MonoBehaviour
     {
         baseLever = transform.Find("BaseLeverRotate").gameObject;
         
-        Debug.Log(baseLever);
-        
         activatedState = !activatedState;
         if (activatedState)
         {
-            Debug.Log("Oucouc");
             baseLever.transform.Rotate(110f, 0f, 0f, Space.Self);
-            //activated.Invoke();
+            activated.Invoke();
         }
         else
         {
-            Debug.Log("sdryhv");
             baseLever.transform.Rotate(-110f, 0f, 0f, Space.Self);
-            //deactivated.Invoke();
+            deactivated.Invoke();
         }
         
     }
