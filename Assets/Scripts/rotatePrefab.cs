@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class RotatePrefab : MonoBehaviour
 {
@@ -11,40 +12,45 @@ public class RotatePrefab : MonoBehaviour
 	public float timeToRotate;
 	
 	private float _time;
-	private Quaternion _targetRotation;
-	
-	// Start is called before the first frame update
-    void Start()
-    {
-	    
-    }
+	private Quaternion _endRotation;
 
     // Update is called once per frame
-    void Update()
+    
+    public void RotateXPrefab()
+    {
+	    StartCoroutine(RotateCoroutine());
+    }
+    
+    private IEnumerator RotateCoroutine()
+    //void Update()
     {
 	    if (axeToRotate == "x")
 	    {
-		    _targetRotation = Quaternion.Euler(degreeToRotate, 0, 0);
+		    _endRotation = Quaternion.Euler(degreeToRotate, 0, 0);
 		    //prefab.transform.Rotate(new Vector3(degreeToRotate,0,0), Space.Self);    
 	    }
 	    else if (axeToRotate == "y")
 	    {
-		    _targetRotation = Quaternion.Euler(0, degreeToRotate, 0);
+		    _endRotation = Quaternion.Euler(0, degreeToRotate, 0);
 		    //prefab.transform.Rotate(new Vector3(0,degreeToRotate,0), Space.Self);
 	    }
 	    else if (axeToRotate == "z")
 	    {
-		    _targetRotation = Quaternion.Euler(0, 0, degreeToRotate);
+		    _endRotation = Quaternion.Euler(0, 0, degreeToRotate);
 		    //prefab.transform.Rotate(new Vector3(0,0,degreeToRotate), Space.Self);
 	    }
 	    
 	    
-	    _time += Time.deltaTime;
-	    if (_time < timeToRotate)
-	    {
-		    float t = _time / timeToRotate;
-		    prefab.transform.rotation = Quaternion.Slerp(transform.rotation, _targetRotation, t);
+	    float t = 0f;
+	    Quaternion startRotation = prefab.transform.rotation;
+
+	    while (t < 1) {
+		    t += Time.deltaTime / timeToRotate;
+		    prefab.transform.rotation = Quaternion.Slerp(startRotation, _endRotation, t);
+		    yield return null;
 	    }
+	    
+	    prefab.transform.rotation = _endRotation; 
 
     }
 }
