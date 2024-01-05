@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
                 unClampedRotationX -= 360;
             }
 
-            var clampedRotationX = Mathf.Clamp(unClampedRotationX, -60, 60);
+            var clampedRotationX = Mathf.Clamp(unClampedRotationX, -90, 90);
 
             cameraTransform.localRotation =
                 Quaternion.Euler(new Vector3(
