@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7520046738218902093}
   - component: {fileID: 7784716628294925910}
+  - component: {fileID: 883397461097804579}
   m_Layer: 0
   m_Name: Lever
   m_TagString: Untagged
@@ -87,6 +88,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.31942326, y: 0.28661075, z: 1}
   m_Center: {x: 0.0072634043, y: 0.15645579, z: -3.616367e-16}
+--- !u!114 &883397461097804579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4776930246217534083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2688e87769a31c849a0a4779fe8065dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated:
+    m_PersistentCalls:
+      m_Calls: []
+  deactivated:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &5748107425678709569
 PrefabInstance:
   m_ObjectHideFlags: 0
