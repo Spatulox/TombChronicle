@@ -4932,6 +4932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1710586129377511989}
   - component: {fileID: -6538538734734755474}
+  - component: {fileID: 3789909322244401050}
   m_Layer: 0
   m_Name: Torch
   m_TagString: Thing
@@ -4982,6 +4983,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &3789909322244401050
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7409349888375199852}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.19473723, y: 0.04113722, z: 0.20455068}
+  m_Center: {x: 0.004968837, y: 0.16121444, z: 0.004422769}
 --- !u!1001 &27988771678895521
 PrefabInstance:
   m_ObjectHideFlags: 0
