@@ -20,11 +20,13 @@ public class TriggeredThings : MonoBehaviour
             //activatedState = !activatedState;
             if (activatedState)
             {
+                Debug.Log("Activating");
                 activated.Invoke();
                 activatedState = !activatedState;
             }
             else if(desactivateThing)
             {
+                Debug.Log("Desactivating");
                 deactivated.Invoke();
                 activatedState = !activatedState;
             }
