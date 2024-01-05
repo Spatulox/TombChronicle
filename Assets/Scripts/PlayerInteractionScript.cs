@@ -56,12 +56,18 @@ public class PlayerInteractionScript : MonoBehaviour
                             _thingInHand = !_thingInHand;
                             if (_player != null)
                             {
-                                //player = player.transform.Find("FPS").gameObject;
                                 thingObject.transform.parent = _player.transform;
                                 thingObject.transform.localPosition = new Vector3(0.7f, -0.5f, 1.2f);
                                 thingObject.transform.localRotation = Quaternion.Euler(Vector3.zero);
-                                
-                                thingObject.GetComponent<Rigidbody>().isKinematic = true;
+
+                                try
+                                {
+                                    thingObject.GetComponent<Rigidbody>().isKinematic = true;
+                                }
+                                catch
+                                {
+                                    
+                                }
 
                                 _thingToThrow = thingObject;
                             }
