@@ -143,8 +143,8 @@ public class PlayerController : MonoBehaviour
             {
                 robot = robot.transform.Find("FPS").gameObject;
                 Camera.main.transform.parent = robot.transform;
-                Camera.main.transform.localPosition = new Vector3(0, 0.46f, 0);
-                Camera.main.transform.localRotation = Quaternion.Euler(Vector3.zero);
+                Camera.main.transform.localPosition = new Vector3(0, 1.6f, 0);
+                Camera.main.transform.localRotation = Quaternion.Euler(new Vector3(0, 180f, 0));
             }
         }
         else
