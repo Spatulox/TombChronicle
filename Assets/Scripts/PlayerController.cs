@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     {
         mainCamera = Camera.main;
         //mainCamera.enabled = true;
-        sprint = speed * 2;
+        sprint = speed * 1.6f;
         saveSpeed = speed;
         Cursor.lockState = CursorLockMode.Locked;
     }
