@@ -10,6 +10,7 @@ public class OpenVerticalDoors : MonoBehaviour
     private float _height;
     public int secondBeforeClose = 10;
     public int automaticClose = 1;
+    public bool dontCareAboutAnimations = false;
     private Vector3 _initialPos;
     private Vector3 _finalUpPos;
     private Vector3 _currPos;
@@ -32,9 +33,10 @@ public class OpenVerticalDoors : MonoBehaviour
 
     public void UpperHeight()
     {
-        if (!_isTakingOff && !_isLanding)
+        if (!_isTakingOff && !_isLanding || dontCareAboutAnimations)
         {
             _isTakingOff = true;
+            this._currPos = this._initialPos;
             StartCoroutine(TakeOffObject());
             
         }
@@ -42,9 +44,10 @@ public class OpenVerticalDoors : MonoBehaviour
     
     public void LowerHeight()
     {
-        if (!_isTakingOff && !_isLanding)
+        if (!_isTakingOff && !_isLanding || dontCareAboutAnimations)
         {
             _isLanding = true;
+            this._currPos = this._finalUpPos;
             StartCoroutine(LandObject());
         }
     }
