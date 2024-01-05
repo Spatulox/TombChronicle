@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: closedChest Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9dca21d82c808474a8f6e0aff87a5260, type: 3}
+      propertyPath: m_TagString
+      value: Thing
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7133658859194481745, guid: 9dca21d82c808474a8f6e0aff87a5260, type: 3}
