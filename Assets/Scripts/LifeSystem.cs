@@ -35,20 +35,25 @@ public class LifeSystem : MonoBehaviour
         SceneManager.LoadScene(sceneName: nameScene);
     }
 
-    //tp vers le spawnpoint
-    public void OnCollisionEnter(Collision collision)
+    // TP vers le spawnpoint lorsqu'on touche la zone de déclenchement
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.transform.CompareTag("DamageZone"))
+        if (other.CompareTag("DamageZone"))
         {
+            life -= 1;
             RespawnPlayer();
         }
-    }
-    void RespawnPlayer()
+        else if (other.CompareTag("Spawnpoint"))
         {
-            transform.position = playerRespawnPoint;
+            SetRespawnPoint(other.transform.position);
         }
-    
-    
+    }
+
+    void RespawnPlayer()
+    {
+        transform.position = playerRespawnPoint;
+    }
+
     public void SetRespawnPoint(Vector3 newRespawnPoint)
     {
         playerRespawnPoint = newRespawnPoint;
