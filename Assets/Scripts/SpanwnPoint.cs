@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.transform.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            LifeSystem playerLifeSystem = collision.transform.GetComponent<LifeSystem>();
+            
+            LifeSystem playerLifeSystem = other.GetComponent<LifeSystem>();
 
             if (playerLifeSystem != null)
             {
+                // Définir le nouveau point de réapparition
                 playerLifeSystem.SetRespawnPoint(transform.position);
 
-                // si on veut que le spawnpoint ne puisse fonctionner que une fois (facultatif)
+                // Détruire le cube de spawnpoint après l'avoir touché (facultatif)
                 // Destroy(gameObject);
             }
         }
