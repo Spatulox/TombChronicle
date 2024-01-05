@@ -622,6 +622,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot
       objectReference: {fileID: 0}
+    - target: {fileID: 2373183921741792973, guid: 4af106eedb0b65444b06c3d36da7612e, type: 3}
+      propertyPath: m_TagString
+      value: Robot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3552254250854425497, guid: 4af106eedb0b65444b06c3d36da7612e, type: 3}
+      propertyPath: m_TagString
+      value: Robot
+      objectReference: {fileID: 0}
     - target: {fileID: 4181579915591481635, guid: 4af106eedb0b65444b06c3d36da7612e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0
@@ -641,6 +649,10 @@ PrefabInstance:
     - target: {fileID: 4181579915591481635, guid: 4af106eedb0b65444b06c3d36da7612e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8798478515483682383, guid: 4af106eedb0b65444b06c3d36da7612e, type: 3}
+      propertyPath: m_Constraints
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9222092629900342566, guid: 4af106eedb0b65444b06c3d36da7612e, type: 3}
       propertyPath: m_RootOrder
