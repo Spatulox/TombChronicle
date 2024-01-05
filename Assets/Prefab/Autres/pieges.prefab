@@ -96,20 +96,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1768507502568471775, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
       propertyPath: m_Name
       value: fleche (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+      propertyPath: m_TagString
+      value: DamageZone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4563421074099152526}
   m_SourcePrefab: {fileID: 100100000, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
 --- !u!4 &1620314926654253262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1412571051647497312, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
   m_PrefabInstance: {fileID: 425297919677013166}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2105243142084964980 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+  m_PrefabInstance: {fileID: 425297919677013166}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4563421074099152526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105243142084964980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb701e86c47d03240b0d5f0e796f07ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: {fileID: 0}
 --- !u!1001 &4461052669874463826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -170,15 +199,44 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1768507502568471775, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
       propertyPath: m_Name
       value: fleche (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+      propertyPath: m_TagString
+      value: DamageZone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2739182983787696573}
   m_SourcePrefab: {fileID: 100100000, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+--- !u!1 &2682300995273116296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+  m_PrefabInstance: {fileID: 4461052669874463826}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2739182983787696573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2682300995273116296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb701e86c47d03240b0d5f0e796f07ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: {fileID: 0}
 --- !u!4 &3346915764318638130 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1412571051647497312, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
@@ -244,20 +302,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1768507502568471775, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
       propertyPath: m_Name
       value: fleche (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+      propertyPath: m_TagString
+      value: DamageZone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4530222707465101710}
   m_SourcePrefab: {fileID: 100100000, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
 --- !u!4 &6320173179301637294 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1412571051647497312, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
   m_PrefabInstance: {fileID: 4913341322003962062}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6700816015104275988 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+  m_PrefabInstance: {fileID: 4913341322003962062}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4530222707465101710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6700816015104275988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb701e86c47d03240b0d5f0e796f07ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: {fileID: 0}
 --- !u!1001 &5805872966094962562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -318,20 +405,49 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1768507502568471775, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
       propertyPath: m_Name
       value: fleche
       objectReference: {fileID: 0}
+    - target: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+      propertyPath: m_TagString
+      value: DamageZone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7777870318449699091}
   m_SourcePrefab: {fileID: 100100000, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
 --- !u!4 &4830373729417612258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1412571051647497312, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
   m_PrefabInstance: {fileID: 5805872966094962562}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5207075946152104280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+  m_PrefabInstance: {fileID: 5805872966094962562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7777870318449699091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5207075946152104280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb701e86c47d03240b0d5f0e796f07ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: {fileID: 0}
 --- !u!1001 &6563628708903456524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -392,15 +508,44 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1768507502568471775, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
       propertyPath: m_Name
       value: fleche (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+      propertyPath: m_TagString
+      value: DamageZone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1408061129959685471}
   m_SourcePrefab: {fileID: 100100000, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+--- !u!1 &4883895167120941526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
+  m_PrefabInstance: {fileID: 6563628708903456524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1408061129959685471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4883895167120941526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb701e86c47d03240b0d5f0e796f07ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: {fileID: 0}
 --- !u!4 &5227769234914671468 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1412571051647497312, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
