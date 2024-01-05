@@ -41,13 +41,11 @@ public class PlayerInteractionScript : MonoBehaviour
                     {
                         lever.ToggleLever();
                     }
-                    
+
                     if (exitSign != null)
                     {
                         exitSign.ExitLevel();
                     }
-                    
-                    Debug.Log(thingObject);
 
                     if (thingObject.transform.CompareTag("Thing"))
                     {
@@ -68,7 +66,6 @@ public class PlayerInteractionScript : MonoBehaviour
                                 {
                                     
                                 }
-
                                 _thingToThrow = thingObject;
                             }
                         
