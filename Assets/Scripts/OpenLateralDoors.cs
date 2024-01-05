@@ -7,6 +7,7 @@ public class OpenLateralDoors : MonoBehaviour
     public float timeToTRavel = 0.5f;
     public int secondBeforeClose = 10;
     public int automaticClose = 1;
+    public float multiplicatorOpen = 1;
     
     private float _rWidth;
     private float _lWidth;
@@ -46,10 +47,14 @@ public class OpenLateralDoors : MonoBehaviour
         
         _currPosRightPart = _initialRightPos;
         _currPosLeftPart = _initialLeftPos;
+        
+        //Debug.Log(_lWidth);
+        //Debug.Log(_rWidth);
+        
 
         // Calculer les positions finales en utilisant les coordonnées locales par rapport au parent
-        _finalRightPos = new Vector3(rightPart.transform.localPosition.x, rightPart.transform.localPosition.y, _rWidth*0.65f);
-        _finalLeftPos = new Vector3(leftPart.transform.localPosition.x, leftPart.transform.localPosition.y, -_lWidth*0.65f);
+        _finalRightPos = new Vector3(rightPart.transform.localPosition.x, rightPart.transform.localPosition.y, _rWidth * multiplicatorOpen);
+        _finalLeftPos = new Vector3(leftPart.transform.localPosition.x, leftPart.transform.localPosition.y, -_lWidth * multiplicatorOpen);
         
     }
 

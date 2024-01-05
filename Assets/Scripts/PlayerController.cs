@@ -7,12 +7,12 @@ public class PlayerController : MonoBehaviour
     public Transform bodyTransform; //position du jouer
     public Transform cameraTransform;
     public Rigidbody playerRigidBody;
-    public float speed;
+    public float speed = 5f;
     private float saveSpeed;
     private float sprint;
-    public float yawRotationSpeed;
-    public float pitchRotationSpeed;
-    public float jump;
+    public float yawRotationSpeed = 1500f;
+    public float pitchRotationSpeed = 1500f;
+    public float jump = 7f;
     
     private bool remoteControl = false;
 
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     {
         mainCamera = Camera.main;
         //mainCamera.enabled = true;
-        sprint = speed * 2;
+        sprint = speed * 1.6f;
         saveSpeed = speed;
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -138,24 +138,18 @@ public class PlayerController : MonoBehaviour
         remoteControl = !remoteControl;
         if (remoteControl)
         {
-            // Trouver le GameObject nommé "Robot"
             GameObject robot = GameObject.Find("Robot").gameObject;
-
-            // Vérifier si le GameObject "Robot" a été trouvé
             if (robot != null)
             {
                 robot = robot.transform.Find("FPS").gameObject;
                 Camera.main.transform.parent = robot.transform;
-                Camera.main.transform.localPosition = new Vector3(0, 0.46f, 0);
-                Camera.main.transform.localRotation = Quaternion.Euler(Vector3.zero);
+                Camera.main.transform.localPosition = new Vector3(0, 1.6f, 0);
+                Camera.main.transform.localRotation = Quaternion.Euler(new Vector3(0, 180f, 0));
             }
         }
         else
         {
-            // Trouver le GameObject nommé "Robot"
             GameObject player = GameObject.Find("Player").gameObject;
-
-            // Vérifier si le GameObject "Robot" a été trouvé
             if (player != null)
             {
                 player = player.transform.Find("FPS").gameObject;

@@ -10,20 +10,29 @@ public class ButtonScript : MonoBehaviour
     public Material deactivatedMaterial;
     public MeshRenderer meshRenderer;
     public bool exitDetection = true;
+    public bool desactivate = true;
     public string tagToActivate = "Player";
     private bool activatedState;
-    
+
+    private bool saveStateDesactivate;
+
+    private void Start()
+    {
+        saveStateDesactivate = true;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(tagToActivate))
+        if (other.CompareTag(tagToActivate) && saveStateDesactivate)
         {
+            saveStateDesactivate = desactivate;
             ToggleButton();
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag(tagToActivate) && exitDetection)
+        if (other.CompareTag(tagToActivate) && exitDetection && desactivate)
         {
             ToggleButton();
         }
