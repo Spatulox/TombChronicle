@@ -7,13 +7,17 @@ public class StopLevel : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Cursor.lockState = CursorLockMode.None;
-        if (wonLevelOnTouch && other.CompareTag("Player"))
+
+        if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("youWonMenu");
-        }
-        else
-        {
-            SceneManager.LoadScene("youLostMenu");
+            if (wonLevelOnTouch)
+            {
+                SceneManager.LoadScene("youWonMenu");
+            }
+            else
+            {
+                SceneManager.LoadScene("youLostMenu");
+            }   
         }
     }
 }
