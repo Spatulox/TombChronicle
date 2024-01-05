@@ -7,12 +7,12 @@ public class PlayerController : MonoBehaviour
     public Transform bodyTransform; //position du jouer
     public Transform cameraTransform;
     public Rigidbody playerRigidBody;
-    public float speed;
+    public float speed = 5f;
     private float saveSpeed;
     private float sprint;
-    public float yawRotationSpeed;
-    public float pitchRotationSpeed;
-    public float jump;
+    public float yawRotationSpeed = 1500f;
+    public float pitchRotationSpeed = 1500f;
+    public float jump = 7f;
     
     private bool remoteControl = false;
 
@@ -138,10 +138,7 @@ public class PlayerController : MonoBehaviour
         remoteControl = !remoteControl;
         if (remoteControl)
         {
-            // Trouver le GameObject nommé "Robot"
             GameObject robot = GameObject.Find("Robot").gameObject;
-
-            // Vérifier si le GameObject "Robot" a été trouvé
             if (robot != null)
             {
                 robot = robot.transform.Find("FPS").gameObject;
@@ -152,10 +149,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // Trouver le GameObject nommé "Robot"
             GameObject player = GameObject.Find("Player").gameObject;
-
-            // Vérifier si le GameObject "Robot" a été trouvé
             if (player != null)
             {
                 player = player.transform.Find("FPS").gameObject;
