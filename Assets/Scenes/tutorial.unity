@@ -513,7 +513,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60377737}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2f8834d34ee8a34ab477fabf9e1d8c5, type: 3}
   m_Name: 
@@ -4855,6 +4855,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: campfire Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5789957341645311805, guid: 282dec53eac3fc04ea2892e03f831239, type: 3}
+      propertyPath: m_TagString
+      value: Spawnpoint
+      objectReference: {fileID: 0}
     - target: {fileID: 6562271503803438471, guid: 282dec53eac3fc04ea2892e03f831239, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -6000,15 +6004,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5097639972604093001, guid: d34736f47e1e9a04fbd30b38bdfce7aa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 63.369
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 5097639972604093001, guid: d34736f47e1e9a04fbd30b38bdfce7aa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.33
+      value: 0.292
       objectReference: {fileID: 0}
     - target: {fileID: 5097639972604093001, guid: d34736f47e1e9a04fbd30b38bdfce7aa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.567
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: 5097639972604093001, guid: d34736f47e1e9a04fbd30b38bdfce7aa, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7355,17 +7359,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4544030629941860536, guid: 52775d841275c054b9b93b186e3e2359, type: 3}
   m_PrefabInstance: {fileID: 1160214466}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1163682154 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8659395115719285887, guid: d34736f47e1e9a04fbd30b38bdfce7aa, type: 3}
-  m_PrefabInstance: {fileID: 904736353}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2f8834d34ee8a34ab477fabf9e1d8c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1174046340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8135,15 +8128,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1377953761483847090, guid: edb8fd52c1fd65e4cb0ad21e6eefb07a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.43
+      value: -2.181
       objectReference: {fileID: 0}
     - target: {fileID: 1377953761483847090, guid: edb8fd52c1fd65e4cb0ad21e6eefb07a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.437
+      value: -0.647
       objectReference: {fileID: 0}
     - target: {fileID: 1377953761483847090, guid: edb8fd52c1fd65e4cb0ad21e6eefb07a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.535049
+      value: -10.73
       objectReference: {fileID: 0}
     - target: {fileID: 1377953761483847090, guid: edb8fd52c1fd65e4cb0ad21e6eefb07a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8683,6 +8676,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DamageZone
       objectReference: {fileID: 0}
+    - target: {fileID: 2120621480549769329, guid: 588df9ca2ae06874e86acc686653f68b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2682300995273116296, guid: 588df9ca2ae06874e86acc686653f68b, type: 3}
       propertyPath: m_TagString
       value: DamageZone
@@ -8691,9 +8688,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DamageZone
       objectReference: {fileID: 0}
+    - target: {fileID: 5195353552076587869, guid: 588df9ca2ae06874e86acc686653f68b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5207075946152104280, guid: 588df9ca2ae06874e86acc686653f68b, type: 3}
       propertyPath: m_TagString
       value: DamageZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 6675656064773366801, guid: 588df9ca2ae06874e86acc686653f68b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6700816015104275988, guid: 588df9ca2ae06874e86acc686653f68b, type: 3}
       propertyPath: m_TagString
@@ -10257,6 +10262,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: campfire Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5789957341645311805, guid: 282dec53eac3fc04ea2892e03f831239, type: 3}
+      propertyPath: m_TagString
+      value: Spawnpoint
+      objectReference: {fileID: 0}
     - target: {fileID: 6562271503803438471, guid: 282dec53eac3fc04ea2892e03f831239, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -11210,7 +11219,7 @@ PrefabInstance:
     - target: {fileID: 3271646010387624333, guid: 3b672ab38f6c93f4190cc35aada65fdc, type: 3}
       propertyPath: life
       value: 
-      objectReference: {fileID: 1163682154}
+      objectReference: {fileID: 0}
     - target: {fileID: 3574456879813356330, guid: 3b672ab38f6c93f4190cc35aada65fdc, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.498678
@@ -11274,6 +11283,10 @@ PrefabInstance:
     - target: {fileID: 8455565470303813757, guid: 3b672ab38f6c93f4190cc35aada65fdc, type: 3}
       propertyPath: m_Name
       value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 8455565470303813757, guid: 3b672ab38f6c93f4190cc35aada65fdc, type: 3}
+      propertyPath: m_TagString
+      value: DamageZone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

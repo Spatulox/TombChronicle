@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,12 +6,13 @@ using UnityEngine.SceneManagement;
 public class LifeSystem : MonoBehaviour
 {
     public static int life=3;
-    public string nameScene;
     public Vector3 playerRespawnPoint;
+    private string _nameScene;
 
     // Start is called before the first frame update
     void Start()
     {
+        _nameScene = SceneManager.GetActiveScene().name;
         if (life==0)
         {
             life = 3;
@@ -32,19 +34,21 @@ public class LifeSystem : MonoBehaviour
     //relance la scene
     public void loadScene()
     {
-        SceneManager.LoadScene(sceneName: nameScene);
+        SceneManager.LoadScene(_nameScene);
     }
 
     // TP vers le spawnpoint lorsqu'on touche la zone de déclenchement
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("DamageZone"))
+         if (other.CompareTag("DamageZone"))
         {
             life -= 1;
             RespawnPlayer();
         }
-        else if (other.CompareTag("Spawnpoint"))
+        
+        else  if (other.CompareTag("Spawnpoint"))
         {
+            Debug.Log(other.transform.position);
             SetRespawnPoint(other.transform.position);
         }
     }
