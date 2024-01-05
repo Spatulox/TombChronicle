@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1540184909745552123}
   - component: {fileID: 7303576822313845808}
+  - component: {fileID: 1558788378772070986}
   m_Layer: 0
   m_Name: Chair
   m_TagString: Thing
@@ -60,6 +61,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &1558788378772070986
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781978068173581701}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.86245567, y: 0.7014933, z: 0.76987123}
+  m_Center: {x: -0.022159845, y: 0.40634748, z: -0.008110523}
 --- !u!1001 &6071747322161817828
 PrefabInstance:
   m_ObjectHideFlags: 0
