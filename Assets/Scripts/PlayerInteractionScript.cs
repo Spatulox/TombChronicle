@@ -55,7 +55,7 @@ public class PlayerInteractionScript : MonoBehaviour
                             if (_player != null)
                             {
                                 thingObject.transform.parent = _player.transform;
-                                thingObject.transform.localPosition = new Vector3(0.7f, -0.5f, 1.2f);
+                                thingObject.transform.localPosition = new Vector3(0.7f, -0.6f, 1.3f);
                                 thingObject.transform.localRotation = Quaternion.Euler(Vector3.zero);
 
                                 try
