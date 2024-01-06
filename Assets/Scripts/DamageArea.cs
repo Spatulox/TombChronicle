@@ -14,7 +14,8 @@ public class DamageArea : MonoBehaviour
 
         // Start is called before the first frame update
 
-    void Start()
+    /*
+     void Start()
     {
         life = GetComponent<LifeSystem>();
         if (life == null)
@@ -22,6 +23,7 @@ public class DamageArea : MonoBehaviour
             Debug.LogError("LifeSystem n'est pas trouvé sur l'objet.");
         }
     }
+    */
 
     // Update is called once per frame
     void Update()
