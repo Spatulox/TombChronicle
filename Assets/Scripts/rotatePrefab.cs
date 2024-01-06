@@ -59,7 +59,7 @@ public class RotatePrefab : MonoBehaviour
     
     private IEnumerator RotateAfterDelay()
     {
-	    yield return new WaitForSeconds(timeToRotate+2);
+	    yield return new WaitForSeconds(timeToRotate+0.5f);
 	    _isTurning = false;
     }
 }
