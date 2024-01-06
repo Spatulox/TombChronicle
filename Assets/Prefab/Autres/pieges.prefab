@@ -29,9 +29,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4830373729417612258}
-  - {fileID: 3346915764318638130}
-  - {fileID: 6320173179301637294}
   - {fileID: 1620314926654253262}
+  - {fileID: 6320173179301637294}
+  - {fileID: 3346915764318638130}
   - {fileID: 5227769234914671468}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1768507502568471775, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
       propertyPath: m_Name
@@ -201,7 +201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1768507502568471775, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
       propertyPath: m_Name
@@ -304,7 +304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1768507502568471775, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
       propertyPath: m_Name
@@ -407,7 +407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1768507502568471775, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
       propertyPath: m_Name
@@ -489,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1768507502568471775, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1788392288779677402, guid: 78103157af559184a9f0759e56dba4f7, type: 3}
       propertyPath: m_Name
