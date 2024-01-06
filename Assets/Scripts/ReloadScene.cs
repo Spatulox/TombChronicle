@@ -12,9 +12,10 @@ public class ReloadScene : MonoBehaviour
     {
         _nameScene = SceneManager.GetActiveScene().name;
     }
-
-    private void OnTriggerEnter(Collider other)
+    
+    public void ReloadSceneX()
     {
         SceneManager.LoadScene(_nameScene);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
