@@ -28,7 +28,7 @@ public class LifeSystem : MonoBehaviour
     {
         if (lifeText != null) 
         {
-            lifeText.text = "Life : " + life;
+            lifeText.text = "\u2764\ufe0f " + life;
         }
     }
 
