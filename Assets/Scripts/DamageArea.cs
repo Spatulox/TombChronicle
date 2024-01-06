@@ -28,7 +28,7 @@ public class DamageArea : MonoBehaviour
     {
         
     }
-
+    
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.CompareTag("Player"))

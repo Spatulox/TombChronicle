@@ -51,12 +51,21 @@ public class LifeSystem : MonoBehaviour
         SceneManager.LoadScene(_nameScene);
     }
 
-    // TP vers le spawnpoint lorsqu'on touche la zone de déclenchement
+    private IEnumerator FlashLifeText()
+    {
+        Color originalColor = lifeText.color;
+        lifeText.color = Color.red;
+        yield return new WaitForSeconds(0.5f);
+        lifeText.color = originalColor;
+        
+        UpdateLifeText();
+    }
     private void OnTriggerEnter(Collider other)
     {
          if (other.CompareTag("DamageZone"))
         {
             life -= 1;
+            StartCoroutine(FlashLifeText());
             UpdateLifeText();
             RespawnPlayer();
         }
@@ -67,7 +76,7 @@ public class LifeSystem : MonoBehaviour
             SetRespawnPoint(other.transform.position);
         }
     }
-
+    
     void RespawnPlayer()
     {
         transform.position = playerRespawnPoint;
@@ -77,4 +86,23 @@ public class LifeSystem : MonoBehaviour
     {
         playerRespawnPoint = newRespawnPoint;
     }
+    
+    private IEnumerator DeathAnimation()
+    {
+        float duration = 1.0f; 
+        float alpha = 1.0f; 
+        while (duration > 0f)
+        {
+            duration -= Time.deltaTime; 
+            alpha = Mathf.PingPong(Time.time * 2, 1.0f);
+            if (lifeText != null)
+            {
+                lifeText.color = new Color(lifeText.color.r, lifeText.color.g, lifeText.color.b, alpha);
+            }
+            yield return null;
+        }
+        loadScene();
+    }
+    
 }
+
