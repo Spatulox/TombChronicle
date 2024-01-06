@@ -135,7 +135,7 @@ Transform:
   m_Children:
   - {fileID: 2238988441380286993}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6511722350951133245
 MonoBehaviour:
@@ -183,8 +183,6 @@ GameObject:
   - component: {fileID: 2821814425870593255}
   - component: {fileID: 7558950659383291146}
   - component: {fileID: 1873865265508568297}
-  - component: {fileID: 8780143776284575616}
-  - component: {fileID: 8186563583108085733}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -254,31 +252,3 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: '\u2764\ufe0f '
---- !u!114 &8780143776284575616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7383490965577957634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2f8834d34ee8a34ab477fabf9e1d8c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerRespawnPoint: {x: 0, y: 0, z: 0}
-  lifeText: {fileID: 1873865265508568297}
---- !u!114 &8186563583108085733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7383490965577957634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb701e86c47d03240b0d5f0e796f07ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: {fileID: 0}
-  lifeText: {fileID: 1873865265508568297}
