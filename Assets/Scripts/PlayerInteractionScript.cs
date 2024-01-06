@@ -34,6 +34,7 @@ public class PlayerInteractionScript : MonoBehaviour
                         out var hitInfo, 2f))
                 {
                     var exitSign = hitInfo.transform.GetComponent<ExitSign>();
+                    var reloadSign = hitInfo.transform.GetComponent<ReloadScene>();
                     var lever = hitInfo.transform.GetComponent<LeverScript>();
                     var thingObject = hitInfo.transform.gameObject;
                     
@@ -45,6 +46,12 @@ public class PlayerInteractionScript : MonoBehaviour
                     if (exitSign != null)
                     {
                         exitSign.ExitLevel();
+                    }
+                    
+                    Debug.Log(reloadSign);
+                    if (reloadSign != null)
+                    {
+                        reloadSign.ReloadSceneX();
                     }
 
                     if (thingObject.transform.CompareTag("Thing") || thingObject.transform.CompareTag("UniqueTaking"))
