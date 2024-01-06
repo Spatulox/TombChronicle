@@ -47,7 +47,7 @@ public class PlayerInteractionScript : MonoBehaviour
                         exitSign.ExitLevel();
                     }
 
-                    if (thingObject.transform.CompareTag("Thing"))
+                    if (thingObject.transform.CompareTag("Thing") || thingObject.transform.CompareTag("UniqueTaking"))
                     {
                         if (!_thingInHand)
                         {
