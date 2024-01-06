@@ -9,6 +9,7 @@ TagManager:
   - DamageZone
   - Thing
   - Spawnpoint
+  - UniqueTaking
   layers:
   - Default
   - TransparentFX
