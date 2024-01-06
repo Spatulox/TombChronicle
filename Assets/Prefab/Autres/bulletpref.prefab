@@ -117,12 +117,12 @@ GameObject:
   - component: {fileID: 9016366804724936425}
   - component: {fileID: 8826337494339260062}
   - component: {fileID: 154756864773320016}
-  - component: {fileID: 6387025917613503574}
   - component: {fileID: 1214744789421522851}
   - component: {fileID: 6206654199042786554}
+  - component: {fileID: 8587470090412998214}
   m_Layer: 0
   m_Name: bulletpref
-  m_TagString: Untagged
+  m_TagString: DamageZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,7 +208,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -216,20 +216,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &6387025917613503574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7286198130479645620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66dfe0a28d12dd04d93ef74a4d5d82f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  impactEffect: {fileID: 7286198130479645620}
-  speed: 2
 --- !u!65 &1214744789421522851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -264,3 +250,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: {fileID: 0}
+--- !u!114 &8587470090412998214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7286198130479645620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66dfe0a28d12dd04d93ef74a4d5d82f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  lifeTime: 5
