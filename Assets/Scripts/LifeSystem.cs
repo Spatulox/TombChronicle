@@ -3,11 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class LifeSystem : MonoBehaviour
+
 {
     public static int life=3;
     public Vector3 playerRespawnPoint;
+    public Text lifeText;
     private string _nameScene;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +21,17 @@ public class LifeSystem : MonoBehaviour
         {
             life = 3;
         }
+        UpdateLifeText(); 
     }
+    
+    public void UpdateLifeText()
+    {
+        if (lifeText != null) 
+        {
+            lifeText.text = "Life : " + life;
+        }
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -43,6 +57,7 @@ public class LifeSystem : MonoBehaviour
          if (other.CompareTag("DamageZone"))
         {
             life -= 1;
+            UpdateLifeText();
             RespawnPlayer();
         }
         
