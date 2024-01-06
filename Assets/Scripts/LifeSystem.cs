@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LifeSystem : MonoBehaviour
 {
-    public static int life=3;
+    public static int life = 3;
     public Vector3 playerRespawnPoint;
     private string _nameScene;
 
@@ -40,12 +40,13 @@ public class LifeSystem : MonoBehaviour
     // TP vers le spawnpoint lorsqu'on touche la zone de déclenchement
     private void OnTriggerEnter(Collider other)
     {
-         if (other.CompareTag("DamageZone"))
+        
+        if (other.CompareTag("DamageZone"))
         {
             life -= 1;
             RespawnPlayer();
         }
-        
+    
         else  if (other.CompareTag("Spawnpoint"))
         {
             Debug.Log(other.transform.position);
@@ -55,7 +56,14 @@ public class LifeSystem : MonoBehaviour
 
     void RespawnPlayer()
     {
-        transform.position = playerRespawnPoint;
+        if (playerRespawnPoint != Vector3.zero)
+        {
+            transform.position = playerRespawnPoint;
+        }
+        else
+        {
+            loadScene();
+        }
     }
 
     public void SetRespawnPoint(Vector3 newRespawnPoint)
