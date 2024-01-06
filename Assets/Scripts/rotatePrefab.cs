@@ -11,42 +11,41 @@ public class RotatePrefab : MonoBehaviour
 	
 	public float timeToRotate;
 	
+	private bool _isTurning = false;
 	private float _time;
 	private Quaternion _endRotation;
 
-    // Update is called once per frame
-    
-    public void RotateXPrefab()
+	public void RotateXPrefab()
     {
-	    StartCoroutine(RotateCoroutine());
+	    if (!_isTurning)
+	    {
+		    _isTurning = true;
+		    StartCoroutine(RotateAfterDelay());
+		    StartCoroutine(RotateCoroutine());
+		    StartCoroutine(RotateAfterDelay());
+	    }
+	    
     }
     
     private IEnumerator RotateCoroutine()
-    //void Update()
     {
 	    
 	    Quaternion startRotation = prefab.transform.rotation;
-	    //Quaternion endRotation = Quaternion.identity;
-	    
 	    if (axeToRotate == "x")
 	    {
 		    _endRotation = Quaternion.Euler(degreeToRotate, 0, 0) * startRotation;
-		    //prefab.transform.Rotate(new Vector3(degreeToRotate,0,0), Space.Self);    
 	    }
 	    else if (axeToRotate == "y")
 	    {
 		    _endRotation = Quaternion.Euler(0, degreeToRotate, 0) * startRotation;
-		    //prefab.transform.Rotate(new Vector3(0,degreeToRotate,0), Space.Self);
 	    }
 	    else if (axeToRotate == "z")
 	    {
 		    _endRotation = Quaternion.Euler(0, 0, degreeToRotate) * startRotation;
-		    //prefab.transform.Rotate(new Vector3(0,0,degreeToRotate), Space.Self);
 	    }
 	    
 	    
 	    float t = 0f;
-	    //Quaternion startRotation = prefab.transform.rotation;
 
 	    while (t < 1) {
 		    t += Time.deltaTime / timeToRotate;
@@ -54,7 +53,13 @@ public class RotatePrefab : MonoBehaviour
 		    yield return null;
 	    }
 	    
-	    prefab.transform.rotation = _endRotation; 
+	    prefab.transform.rotation = _endRotation;
 
+    }
+    
+    private IEnumerator RotateAfterDelay()
+    {
+	    yield return new WaitForSeconds(timeToRotate+2);
+	    _isTurning = false;
     }
 }
