@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerRespawnPoint: {x: 0, y: 0, z: 0}
+  lifeText: {fileID: 0}
 --- !u!1 &7126249894478385755
 GameObject:
   m_ObjectHideFlags: 0
