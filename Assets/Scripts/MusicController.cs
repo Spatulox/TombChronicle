@@ -2,41 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(AudioSource))]
-public class MusicController : MonoBehaviour
+public class MusicPlayer : MonoBehaviour
 {
-    [Tooltip("Liste des musiques à jouer")]
-    public AudioClip[] musicClips; 
-
-    [Tooltip("Volume sonore de la musique")]
-    [Range(0f, 1f)]
-    public float volume = 1.0f; 
+   
+    public AudioClip musicToPlay;
+    [Range(0f, 1f)] 
+    public float volume = 1.0f;
 
     private AudioSource audioSource;
+    private bool isPlaying;
 
-    void Awake()
+    private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.loop = true; 
+        audioSource.volume = volume;
     }
 
-    void Start()
+    private void Update()
     {
-        audioSource.loop = true; 
-        audioSource.playOnAwake = false;
-        audioSource.volume = volume; 
-
-        if (musicClips.Length > 0)
+        if (audioSource.volume != volume)
         {
-            PlayMusic(0); 
+            audioSource.volume = volume;
+        }
+        
+        if (!isPlaying && musicToPlay != null)
+        {
+            PlayMusic(musicToPlay);
+            isPlaying = true; 
         }
     }
     
-    public void PlayMusic(int clipIndex)
+    private void PlayMusic(AudioClip clip)
     {
-        if(clipIndex >= 0 && clipIndex < musicClips.Length)
+        audioSource.clip = clip;
+        audioSource.Play();
+    }
+
+    public void ChangeMusic(AudioClip newMusic)
+    {
+        if (audioSource.isPlaying)
         {
-            audioSource.clip = musicClips[clipIndex]; 
-            audioSource.Play(); 
+            audioSource.Stop(); 
         }
+
+        musicToPlay = newMusic;
+        audioSource.clip = newMusic;
+        isPlaying = false;
     }
 }
