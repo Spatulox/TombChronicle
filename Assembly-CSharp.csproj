@@ -143,6 +143,7 @@
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Assets\Prefab\blenderTextures\Materials" />
      <Folder Include="Assets\Prefab\Autres\Blender" />
+     <Folder Include="Assets\Timelines\level2" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@2.2.0\ValidationConfig.json" />
      <Folder Include="Library\PackageCache\com.unity.ide.vscode@1.2.5" />
