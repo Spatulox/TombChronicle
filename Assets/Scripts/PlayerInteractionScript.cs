@@ -1,16 +1,26 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerInteractionScript : MonoBehaviour
 {
     private bool _thingInHand = false;
     private GameObject _player;
+    private GameObject _robot;
     private GameObject _thingToThrow;
+
+    private bool _toggleRobot;
     private void Start()
     {
         _player = GameObject.Find("Player").gameObject;
+        _robot = GameObject.Find("Robot").gameObject;
         if (_player != null)
         {
             _player = _player.transform.Find("FPS").gameObject;
+        }
+        
+        if (_robot != null)
+        {
+            _robot = _robot.transform.Find("FPS").gameObject;
         }
     }
 
@@ -52,10 +62,27 @@ public class PlayerInteractionScript : MonoBehaviour
                         if (!_thingInHand)
                         {
                             _thingInHand = !_thingInHand;
-                            if (_player != null)
+                            if (_player != null && !_toggleRobot)
                             {
                                 thingObject.transform.parent = _player.transform;
                                 thingObject.transform.localPosition = new Vector3(0.7f, -0.6f, 1.3f);
+                                thingObject.transform.localRotation = Quaternion.Euler(Vector3.zero);
+
+                                try
+                                {
+                                    thingObject.GetComponent<Rigidbody>().isKinematic = true;
+                                }
+                                catch
+                                {
+                                    
+                                }
+                                _thingToThrow = thingObject;
+                            }
+                            
+                            if (_robot != null && _toggleRobot)
+                            {
+                                thingObject.transform.parent = _robot.transform;
+                                thingObject.transform.localPosition = new Vector3(-4.5f, -1.5f, -8f);
                                 thingObject.transform.localRotation = Quaternion.Euler(Vector3.zero);
 
                                 try
@@ -74,5 +101,10 @@ public class PlayerInteractionScript : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void ToggleRobot()
+    {
+        _toggleRobot = !_toggleRobot;
     }
 }
