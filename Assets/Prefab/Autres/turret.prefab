@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &312036720564188027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1907804766529330083}
+  m_Layer: 0
+  m_Name: spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1907804766529330083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312036720564188027}
+  m_LocalRotation: {x: 0.6532815, y: 0.27059805, z: -0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 0, y: -1, z: 0.6756991}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 523698394345266306}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 90, y: 45, z: 0}
 --- !u!1001 &2510837774826779414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62,7 +93,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -6513114026492629100, guid: 9684248d166a7c94fb65d508186f3406, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1907804766529330083}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -4282461239263084939, guid: 9684248d166a7c94fb65d508186f3406, type: 3}
       insertIndex: -1
@@ -95,4 +129,4 @@ MonoBehaviour:
   partToRotate: {fileID: 523698394345266306}
   fireRate: 1
   bulletPrefab: {fileID: 7286198130479645620, guid: bafc4bfacf7c32c48b1b664ae48bb17b, type: 3}
-  firePoint: {fileID: 523698394345266306}
+  firePoint: {fileID: 1907804766529330083}
