@@ -48,7 +48,6 @@ public class PlayerInteractionScript : MonoBehaviour
                         exitSign.ExitLevel();
                     }
                     
-                    Debug.Log(reloadSign);
                     if (reloadSign != null)
                     {
                         reloadSign.ReloadSceneX();
