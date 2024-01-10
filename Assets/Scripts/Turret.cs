@@ -5,7 +5,7 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     private Transform target;
-    public float range = 15f;
+    public float range = 20f;
     public string playerTag = "Player";
     public Transform partToRotate;
     private float turnSpeed = 5f;
