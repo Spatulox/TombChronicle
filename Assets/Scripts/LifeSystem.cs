@@ -17,7 +17,7 @@ public class LifeSystem : MonoBehaviour
     void Start()
     {
         _nameScene = SceneManager.GetActiveScene().name;
-        if (life==0)
+        if (life<3)
         {
             life = 3;
         }
