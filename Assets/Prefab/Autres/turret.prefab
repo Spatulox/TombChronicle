@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c0ec2335375fb4d91834eacefbb8c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15
+  range: 20
   playerTag: Player
   partToRotate: {fileID: 523698394345266306}
   fireRate: 1
