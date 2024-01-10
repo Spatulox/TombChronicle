@@ -13571,9 +13571,25 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1421581345392990546, guid: 282dec53eac3fc04ea2892e03f831239, type: 3}
+      propertyPath: m_Intensity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863880278113122676, guid: 282dec53eac3fc04ea2892e03f831239, type: 3}
+      propertyPath: m_Intensity
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2803216026619223637, guid: 282dec53eac3fc04ea2892e03f831239, type: 3}
       propertyPath: m_LocalPosition.y
       value: 41.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370058561328303761, guid: 282dec53eac3fc04ea2892e03f831239, type: 3}
+      propertyPath: m_Intensity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4603105369265388659, guid: 282dec53eac3fc04ea2892e03f831239, type: 3}
+      propertyPath: m_Intensity
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5789957341645311805, guid: 282dec53eac3fc04ea2892e03f831239, type: 3}
       propertyPath: m_Name
