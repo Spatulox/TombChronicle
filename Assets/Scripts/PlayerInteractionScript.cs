@@ -74,7 +74,6 @@ public class PlayerInteractionScript : MonoBehaviour
 
                     if (thingObject.transform.CompareTag("Thing") || thingObject.transform.CompareTag("UniqueTaking"))
                     {
-                        Debug.Log("Yey");
                         Debug.Log(_thingInHand);
                         
                         if (!_thingInHand)
@@ -117,7 +116,6 @@ public class PlayerInteractionScript : MonoBehaviour
                         }
                         else
                         {
-                            Debug.Log("Yoy");
                             _thingToThrow.transform.parent = null;
                             _thingToThrow.GetComponent<Rigidbody>().isKinematic = false;
                             _thingInHand = !_thingInHand;
