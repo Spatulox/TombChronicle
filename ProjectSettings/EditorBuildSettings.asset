@@ -8,11 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/mainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/commands.unity
+  - enabled: 0
+    path: Assets/Scenes/commands_old.unity
     guid: b0a88e78c3f7a9e48be6ec28fb1f8175
-  - enabled: 1
-    path: Assets/Scenes/levelSelection.unity
+  - enabled: 0
+    path: Assets/Scenes/levelSelection_old.unity
     guid: a7041f94ea2df52498dab2fb56e88bc6
   - enabled: 1
     path: Assets/Scenes/tutorial.unity
@@ -36,7 +36,7 @@ EditorBuildSettings:
     path: Assets/Scenes/youLostMenu.unity
     guid: 58426c531feaf0a45a988713217b6bbc
   - enabled: 1
-    path: Assets/Scenes/Prefab.unity
+    path: Assets/Scenes/prefab.unity
     guid: 2a9666d489104274aaadaea77e02cdab
   - enabled: 1
     path: Assets/Scenes/groupPrefab.unity
