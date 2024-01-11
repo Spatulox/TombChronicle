@@ -11,8 +11,24 @@ public class PlayerInteractionScript : MonoBehaviour
     private bool _toggleRobot;
     private void Start()
     {
-        _player = GameObject.Find("Player").gameObject;
-        _robot = GameObject.Find("Robot").gameObject;
+        try
+        {
+            _player = GameObject.Find("Player").gameObject;
+        }
+        catch
+        {
+            Debug.Log("No player ??");
+        }
+
+        try
+        {
+            _robot = GameObject.Find("Robot").gameObject;
+        }
+        catch
+        {
+            Debug.Log("Pas de Robot");
+        }
+
         if (_player != null)
         {
             _player = _player.transform.Find("FPS").gameObject;
