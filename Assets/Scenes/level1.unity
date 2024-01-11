@@ -19760,6 +19760,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 501413261}
     m_Modifications:
+    - target: {fileID: 5136467484146350732, guid: 9f41ccef2882f14419b8d368f2d436a4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5574020312115221364, guid: 9f41ccef2882f14419b8d368f2d436a4, type: 3}
       propertyPath: m_Name
       value: Lantern
