@@ -37,7 +37,7 @@ public class LifeSystem : MonoBehaviour
     void Update()
     {
         //check si tu es a cour de vie
-        if (life==0)
+        if (life<=0)
         {
             loadScene();
         }
