@@ -6,7 +6,7 @@ public class PlayerInteractionScript : MonoBehaviour
     private bool _thingInHand = false;
     private GameObject _player;
     private GameObject _robot;
-    private GameObject _thingToThrow;
+    private GameObject _thingToThrow = null;
 
     private bool _toggleRobot;
     private void Start()
@@ -49,13 +49,6 @@ public class PlayerInteractionScript : MonoBehaviour
                 var cameraTransform = Camera.main.transform;
                 var direction = cameraTransform.rotation * Vector3.forward;
                 
-                if (_thingInHand)
-                {
-                    _thingToThrow.transform.parent = null;
-                    _thingToThrow.GetComponent<Rigidbody>().isKinematic = false;
-                    _thingInHand = !_thingInHand;
-                }
-
                 if (Physics.Raycast(cameraTransform.position, direction,
                         out var hitInfo, 2f))
                 {
@@ -81,6 +74,9 @@ public class PlayerInteractionScript : MonoBehaviour
 
                     if (thingObject.transform.CompareTag("Thing") || thingObject.transform.CompareTag("UniqueTaking"))
                     {
+                        Debug.Log("Yey");
+                        Debug.Log(_thingInHand);
+                        
                         if (!_thingInHand)
                         {
                             _thingInHand = !_thingInHand;
@@ -104,7 +100,7 @@ public class PlayerInteractionScript : MonoBehaviour
                             if (_robot != null && _toggleRobot)
                             {
                                 thingObject.transform.parent = _robot.transform;
-                                thingObject.transform.localPosition = new Vector3(-4.5f, -1.5f, -8f);
+                                thingObject.transform.localPosition = new Vector3(0f, -0.5f, -8f);
                                 thingObject.transform.localRotation = Quaternion.Euler(Vector3.zero);
 
                                 try
@@ -119,7 +115,24 @@ public class PlayerInteractionScript : MonoBehaviour
                             }
                         
                         }
+                        else
+                        {
+                            Debug.Log("Yoy");
+                            _thingToThrow.transform.parent = null;
+                            _thingToThrow.GetComponent<Rigidbody>().isKinematic = false;
+                            _thingInHand = !_thingInHand;
+                        }
                     }
+                }
+                else
+                {
+                    if(_thingToThrow != null)
+                    {
+                        _thingToThrow.transform.parent = null;
+                        _thingToThrow.GetComponent<Rigidbody>().isKinematic = false;
+                        _thingInHand = !_thingInHand;
+                    }
+                    
                 }
             }
         }
